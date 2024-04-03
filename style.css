@@ -85,6 +85,20 @@ ul {
     font-weight: var(--font-medium);
     text-transform: uppercase;
 }
+/*Faça seu pedido*/
+.pedido-btn {
+  background-color: #4CAF50; /* cor de fundo verde */
+  border: none;
+  color: white; /* cor do texto branco */
+  padding: 15px 32px; /* tamanho do preenchimento */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px; /* bordas arredondadas */
+}
 /* BUTTON */
 .btn {
     width: 100%;
