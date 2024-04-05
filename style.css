@@ -266,7 +266,7 @@ ul {
 .hero__slide-text h1,
 .hero__slide-text span {
     font-family: var(--font-title);
-    font-size: 30px; /* DIA D */ 
+    font-size: 25px; /* DIA D */ 
     text-transform: uppercase;
     color: green;
 }
@@ -287,7 +287,7 @@ ul {
     text-align: center;
 }
 .hero__slide-img img {
-    width: 350px;/* FT DIA D */ 
+    width: 450px;/* FT DIA D */ 
 }
 /* ENVIRONMENT */
 .environment__itens {
