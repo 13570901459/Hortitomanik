@@ -266,13 +266,13 @@ ul {
 .hero__slide-text h1,
 .hero__slide-text span {
     font-family: var(--font-title);
-    font-size: 25px; /* DIA D */ 
+    font-size: 100px; /* DIA D */ 
     text-transform: uppercase;
     color: green;
 }
 .hero__slide-text span {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -35%);
     color: green;
