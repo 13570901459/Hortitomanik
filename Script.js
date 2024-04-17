@@ -69,8 +69,8 @@ function enviarParaWhatsApp() {
   var mensagemEncoded = encodeURIComponent(mensagem);
 
   // Construa o link do WhatsApp com a mensagem
-  var linkWhatsApp = "https://wa.me/qr/M4RXLWSD3W3GO1?text=" + mensagemEncoded;
+  var linkWhatsApp = "https://wa.me/message/AA34OUJP2EICK1?text=" + mensagemEncoded;
 
   // Abra o link no WhatsApp
   window.open(linkWhatsApp);
-}
+                                              }
