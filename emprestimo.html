@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Empréstimo</title>
+  <title>Simule seu Empréstimo</title>
   <link rel="shortcut icon" href="logot.png" type="image/x-icon">
   <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
+  <header>     <div class="container">
+
+     <h1 class="logo">Simule seu <span>EMPRÉSTIMO</span></h1>
+    </header>
+           
+                              </div>
+  </header>
+
   <div class="container">
-    <h1>Simule seu Empréstimo</h1>
     <form id="loan-form">
       <div class="form-group">
         <label for="name">Nome</label>
@@ -33,89 +40,27 @@
       </div>
       <button type="submit">Simular Empréstimo</button>
     </form>
+
     <div id="results" class="hidden">
-      <h2>Simulação de Empréstimo</h2>
+      <h2>Resultado</h2>
       <div id="monthly-payment"></div>
       <div id="total-payment"></div>
       <div id="amount-simulated"></div>
       <div id="months-simulated"></div>
       <div id="interest-rate"></div>
-      <div id="days-until-first-payment"></div>
-      <div id="total-interest"></div>
-      <button id="send-whatsapp">Enviar para análise</button>
+      <div id="days-until-first-payment"></dst"></div>
+      <button id="enviar-whatsapp" onclick="enviarParaWhatsApp()">Enviar para análise</button>
+
     </div>
   </div>
-  <script>
-    document.getElementById('loan-form').addEventListener('submit', function(e) {
-      // Prevent default form submission
-      e.preventDefault();
 
-      // Get input values
-      var name = document.getElementById('name').value;
-      var address = document.getElementById('address').value;
-      var cpf = document.getElementById('cpf').value;
-      var amount = parseFloat(document.getElementById('amount').value);
-      var months = parseInt(document.getElementById('months').value);
+  <footer>
+     <div class="copy">
+            <p>&copy Todos os direitos reservados</p>
+            <span>HortiManik</span>
+        </div>
+  </footer>
 
-      // Set monthly interest rate
-      var monthlyInterestRate = 0.15; // 15% ao mês
-
-      // Calculate monthly payment
-      var monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
-
-      // Calculate total payment
-      var totalPayment = monthlyPayment * months;
-
-      // Calculate total interest
-      var totalInterest = totalPayment - amount;
-
-      // Calculate days until first payment
-      var daysUntilFirstPayment = 30; // Exemplo, pode ser ajustado conforme necessário
-
-      // Display results
-      document.getElementById('results').classList.remove('hidden');
-      document.getElementById('monthly-payment').innerHTML = 'Valor da Parcela: R$ ' + monthlyPayment.toFixed(2);
-      document.getElementById('total-payment').innerHTML = 'Total das Parcelas: R$ ' + totalPayment.toFixed(2);
-      document.getElementById('amount-simulated').innerHTML = 'Valor Simulado: R$ ' + amount.toFixed(2);
-      document.getElementById('months-simulated').innerHTML = 'Prazo: ' + months + ' parcelas';
-      document.getElementById('interest-rate').innerHTML = 'Taxa de Juros: ' + (monthlyInterestRate * 100).toFixed(2) + '% a.m.';
-      document.getElementById('days-until-first-payment').innerHTML = 'Dias até a primeira parcela: ' + daysUntilFirstPayment;
-      document.getElementById('total-interest').innerHTML = 'Total dos Juros: R$ ' + totalInterest.toFixed(2);
-
-      // Store client data
-      localStorage.setItem('clientName', name);
-      localStorage.setItem('clientAddress', address);
-      localStorage.setItem('clientCPF', cpf);
-    });
-
-    document.getElementById('send-whatsapp').addEventListener('click', function() {
-      // Get client data
-      var name = localStorage.getItem('clientName');
-      var address = localStorage.getItem('clientAddress');
-      var cpf = localStorage.getItem('clientCPF');
-
-      // Get results
-      var amountSimulated = document.getElementById('amount-simulated').innerText;
-      var monthsSimulated = document.getElementById('months-simulated').innerText;
-      var monthlyPayment = document.getElementById('monthly-payment').innerText;
-      var interestRate = document.getElementById('interest-rate').innerText;
-      var daysUntilFirstPayment = document.getElementById('days-until-first-payment').innerText;
-      var totalInterest = document.getElementById('total-interest').innerText;
-
-      // Format message
-      var message = "Nome: " + name + "%0A" +
-                    "Endereço: " + address + "%0A" +
-                    "CPF: " + cpf + "%0A" +
-                    "Valor Simulado: " + amountSimulated.substring(15) + "%0A" +
-                    "Prazo: " + monthsSimulated.substring(7) + "%0A" +
-                    "Valor da Parcela: " + monthlyPayment.substring(20) + "%0A" +
-                    "Taxa de Juros: " + interestRate.substring(15) + "%0A" +
-                    "Dias até a primeira parcela: " + daysUntilFirstPayment.substring(27) + "%0A" +
-                    "Total dos Juros: " + totalInterest.substring(16);
-
-      // Open WhatsApp with message
-      window.open("https://wa.me/?text=" + message);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
