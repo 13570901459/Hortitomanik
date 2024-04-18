@@ -8,12 +8,10 @@
   <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
-  <header>     <div class="container">
-
-     <h1 class="logo">Simule seu <span>EMPRÉSTIMO</span></h1>
-    </header>
-           
-                              </div>
+  <header>
+    <div class="container">
+      <h1 class="logo">Simule seu <span>EMPRÉSTIMO</span></h1>
+    </div>
   </header>
 
   <div class="container">
@@ -48,19 +46,34 @@
       <div id="amount-simulated"></div>
       <div id="months-simulated"></div>
       <div id="interest-rate"></div>
-      <div id="days-until-first-payment"></dst"></div>
-      <button id="enviar-whatsapp" onclick="enviarParaWhatsApp()">Enviar para análise</button>
-
+      <div id="days-until-first-payment"></div>
+      <button onclick="enviarParaWhatsApp()">Enviar Resultado para WhatsApp</button>
     </div>
   </div>
 
   <footer>
      <div class="copy">
-            <p>&copy Todos os direitos reservados</p>
-            <span>HortiManik</span>
-        </div>
+        <p>&copy Todos os direitos reservados</p>
+        <span>HortiManik</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    function enviarParaWhatsApp() {
+      var name = document.getElementById("name").value;
+      var address = document.getElementById("address").value;
+      var cpf = document.getElementById("cpf").value;
+      var amount = document.getElementById("amount").value;
+      var months = document.getElementById("months").value;
+      var message = "Nome: " + name + "\nEndereço: " + address + "\nCPF: " + cpf + "\nValor do Empréstimo: " + amount + "\nParcelas: " + months;
+      
+      // Aqui você pode adicionar a lógica para enviar 'message' para o WhatsApp
+      // Por exemplo, utilizando APIs de terceiros ou redirecionando para um link do WhatsApp
+      
+      // Exemplo de redirecionamento para o WhatsApp usando o protocolo 'https://wa.me/qr/WLRRRWGBQNECP1'
+      window.location.href = "https://wa.me/qr/WLRRRWGBQNECP1/?text=" + encodeURIComponent(message);
+    }
+  </script>
 </body>
 </html>
