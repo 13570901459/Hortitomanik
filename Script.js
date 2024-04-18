@@ -7,7 +7,7 @@ document.getElementById('loan-form').addEventListener('submit', function(e) {
   var amount = parseFloat(document.getElementById('amount').value);
   var months = parseInt(document.getElementById('months').value);
 
-  var monthlyInterestRate = 0.15;
+  var monthlyInterestRate = 0.18;
   var monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
   var totalPayment = monthlyPayment * months;
   var totalInterest = totalPayment - amount;
