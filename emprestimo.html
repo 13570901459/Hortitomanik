@@ -24,6 +24,10 @@
         <input type="text" id="neighborhood" placeholder="Digite seu bairro" required>
       </div>
       <div class="form-group">
+        <label for="city">Cidade</label>
+        <input type="text" id="city" placeholder="Digite sua cidade" required>
+      </div>
+      <div class="form-group">
         <label for="cep">CEP</label>
         <input type="text" id="cep" placeholder="Digite seu CEP" required>
       </div>
@@ -72,6 +76,7 @@
       var name = document.getElementById('name').value;
       var address = document.getElementById('address').value;
       var neighborhood = document.getElementById('neighborhood').value;
+      var city = document.getElementById('city').value;
       var cep = document.getElementById('cep').value;
       var state = document.getElementById('state').value;
       var cpf = document.getElementById('cpf').value;
@@ -99,6 +104,7 @@
       localStorage.setItem('clientName', name);
       localStorage.setItem('clientAddress', address);
       localStorage.setItem('clientNeighborhood', neighborhood);
+      localStorage.setItem('clientCity', city);
       localStorage.setItem('clientCEP', cep);
       localStorage.setItem('clientState', state);
       localStorage.setItem('clientCPF', cpf);
@@ -111,6 +117,7 @@
       var name = localStorage.getItem('clientName');
       var address = localStorage.getItem('clientAddress');
       var neighborhood = localStorage.getItem('clientNeighborhood');
+      var city = localStorage.getItem('clientCity');
       var cep = localStorage.getItem('clientCEP');
       var state = localStorage.getItem('clientState');
       var cpf = localStorage.getItem('clientCPF');
@@ -128,6 +135,7 @@
       var emailBody = "Nome: " + name + "\n" +
                       "Endereço: " + address + "\n" +
                       "Bairro: " + neighborhood + "\n" +
+                      "Cidade: " + city + "\n" +
                       "CEP: " + cep + "\n" +
                       "Estado: " + state + "\n" +
                       "CPF: " + cpf + "\n" +
@@ -140,9 +148,9 @@
                       "Dias até a primeira parcela: " + daysUntilFirstPayment.substring(27) + "\n" +
                       "Total dos Juros: " + totalInterest.substring(16);
 
-      window.location.href = "mailto:leandrosouzasilva814@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
+      window.location.href = "mailto:hortimanik@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
     });
   </script>
 </body>
-          </html>
-          
+  </html>
+      
