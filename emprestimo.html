@@ -55,6 +55,10 @@
         <label for="months">Parcelas (até 5 vezes)</label>
         <input type="number" id="months" max="5" placeholder="Digite o número de parcelas" required>
       </div>
+      <div class="form-group">
+        <label for="loyalty">Crédito Fidelidade (opcional)</label>
+        <input type="text" id="loyalty" placeholder="Digite seu código de fidelidade (opcional)">
+      </div>
       <button type="submit">Simular Empréstimo</button>
     </form>
     <div id="results" class="hidden">
@@ -84,6 +88,7 @@
       var pix = document.getElementById('pix').value;
       var amount = parseFloat(document.getElementById('amount').value);
       var months = parseInt(document.getElementById('months').value);
+      var loyalty = document.getElementById('loyalty').value;
 
       var monthlyInterestRate = 0.18; // 18% ao mês
 
@@ -111,6 +116,7 @@
       localStorage.setItem('clientPhone', phone);
       localStorage.setItem('clientPix', pix);
       localStorage.setItem('clientMonths', months);
+      localStorage.setItem('clientLoyalty', loyalty);
     });
 
     document.getElementById('send-email').addEventListener('click', function() {
@@ -124,6 +130,7 @@
       var phone = localStorage.getItem('clientPhone');
       var pix = localStorage.getItem('clientPix');
       var months = localStorage.getItem('clientMonths');
+      var loyalty = localStorage.getItem('clientLoyalty');
 
       var amountSimulated = document.getElementById('amount-simulated').innerText;
       var monthsSimulated = document.getElementById('months-simulated').innerText;
@@ -148,9 +155,14 @@
                       "Dias até a primeira parcela: " + daysUntilFirstPayment.substring(27) + "\n" +
                       "Total dos Juros: " + totalInterest.substring(16);
 
-      window.location.href = "mailto:hortimanik@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
+      // Adicionando crédito fidelidade se fornecido
+      if (loyalty) {
+        emailBody += "\nCrédito Fidelidade: " + loyalty;
+      }
+
+      window.location.href = "mailto:leandrosouzasilva814@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
     });
   </script>
 </body>
   </html>
-      
+  
