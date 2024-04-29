@@ -24,6 +24,14 @@
         <input type="text" id="cpf" placeholder="Digite seu CPF" required>
       </div>
       <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input type="tel" id="phone" placeholder="Digite seu telefone" required>
+      </div>
+      <div class="form-group">
+        <label for="pix">Chave PIX</label>
+        <input type="text" id="pix" placeholder="Digite sua chave PIX" required>
+      </div>
+      <div class="form-group">
         <label for="amount">Valor do Empréstimo</label>
         <input type="number" id="amount" placeholder="Digite o valor" required>
       </div>
@@ -52,6 +60,8 @@
       var name = document.getElementById('name').value;
       var address = document.getElementById('address').value;
       var cpf = document.getElementById('cpf').value;
+      var phone = document.getElementById('phone').value;
+      var pix = document.getElementById('pix').value;
       var amount = parseFloat(document.getElementById('amount').value);
       var months = parseInt(document.getElementById('months').value);
 
@@ -74,12 +84,16 @@
       localStorage.setItem('clientName', name);
       localStorage.setItem('clientAddress', address);
       localStorage.setItem('clientCPF', cpf);
+      localStorage.setItem('clientPhone', phone);
+      localStorage.setItem('clientPix', pix);
     });
 
     document.getElementById('send-email').addEventListener('click', function() {
       var name = localStorage.getItem('clientName');
       var address = localStorage.getItem('clientAddress');
       var cpf = localStorage.getItem('clientCPF');
+      var phone = localStorage.getItem('clientPhone');
+      var pix = localStorage.getItem('clientPix');
 
       var amountSimulated = document.getElementById('amount-simulated').innerText;
       var monthsSimulated = document.getElementById('months-simulated').innerText;
@@ -91,6 +105,8 @@
       var emailBody = "Nome: " + name + "\n" +
                       "Endereço: " + address + "\n" +
                       "CPF: " + cpf + "\n" +
+                      "Telefone: " + phone + "\n" +
+                      "Chave PIX: " + pix + "\n" +
                       "Valor Simulado: " + amountSimulated.substring(15) + "\n" +
                       "Prazo: " + monthsSimulated.substring(9) + "\n" +
                       "Valor da Parcela: " + monthlyPayment.substring(20) + "\n" +
@@ -98,9 +114,9 @@
                       "Dias até a primeira parcela: " + daysUntilFirstPayment.substring(27) + "\n" +
                       "Total dos Juros: " + totalInterest.substring(16);
 
-      window.location.href = "mailto:leandrosouzasilva814@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
+      window.location.href = "mailto:hortimanik@gmail.com?subject=Solicitação de Empréstimo&body=" + encodeURIComponent(emailBody);
     });
   </script>
 </body>
-                                   </html>
-          
+  </html>
+  
