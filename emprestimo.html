@@ -90,7 +90,7 @@
       var months = parseInt(document.getElementById('months').value);
       var loyalty = document.getElementById('loyalty').value;
 
-      var monthlyInterestRate = 0.08; // 18% ao mês
+      var monthlyInterestRate = 0.13; // 13% ao mês
 
       var monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -months));
       var totalPayment = monthlyPayment * months;
