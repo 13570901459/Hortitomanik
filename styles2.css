@@ -1,29 +1,26 @@
-
-.logo {
-  font-family: Arial, sans-serif; /* Defina a família de fontes desejada */
-  font-size: 24px; /* Defina o tamanho da fonte */
-}
-
-.logo span {
-  color: Black; /* Defina a cor do texto dentro da tag <span> */
-}
+/* Estilos gerais */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background:whint;
+  background-color: #f4f4f4; /* Cor de fundo mais neutra */
+  color: #333; /* Cor de texto padrão */
 }
 
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px;
+  background-color: #fff; /* Fundo branco para destaque do conteúdo */
+  border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
 }
 
+/* Cabeçalho */
 header {
-  background-color:  #linear-gradient(to bottom, rgb(26, 35, 126), rgb(13, 71, 161));
+  background: linear-gradient(to bottom, #004d99, #0066cc); /* Gradiente de azul mais profissional */
   color: #fff;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 header .container {
@@ -34,13 +31,14 @@ header .container {
 
 header h1 {
   margin: 0;
+  font-size: 28px; /* Aumenta o tamanho do título para maior impacto */
 }
 
+/* Navegação */
 nav ul {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
-  
 }
 
 nav ul li {
@@ -55,12 +53,18 @@ nav ul li:first-child {
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  font-weight: bold; /* Deixa o texto dos links em negrito */
 }
 
+nav ul li a:hover {
+  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+}
+
+/* Rodapé */
 footer {
-  background-color: light green;
-  color: black;
-  padding: 10px 0;
+  background-color: #333; /* Fundo escuro para contraste */
+  color: #fff;
+  padding: 15px 0;
   text-align: center;
 }
 
@@ -68,30 +72,33 @@ footer p {
   margin: 0;
 }
 
+/* Estilos de formulário */
 .form-group {
   margin-bottom: 20px;
 }
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: bold; /* Destaque as etiquetas com negrito */
 }
 
 input {
   width: calc(100% - 22px);
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
 }
 
 button {
   display: block;
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
-  background-color: light green;
-  color:light green;
+  background-color: #28a745; /* Verde mais profissional */
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -99,13 +106,24 @@ button {
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #218838; /* Tom mais escuro de verde ao passar o mouse */
 }
 
+/* Resultados e elementos ocultos */
 #results {
   margin-top: 20px;
 }
 
 .hidden {
   display: none;
+}
+
+/* Estilo da logo */
+.logo {
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+}
+
+.logo span {
+  color: #333; /* Cor do texto mais escura para contraste */
 }
