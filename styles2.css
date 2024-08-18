@@ -3,24 +3,25 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Cor de fundo mais neutra */
-  color: #333; /* Cor de texto padrão */
+  background-color: #f9f9f9; /* Cor de fundo neutra e leve */
+  color: #333; /* Texto em cor escura para boa legibilidade */
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff; /* Fundo branco para destaque do conteúdo */
-  border-radius: 8px; /* Bordas arredondadas para um visual mais moderno */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para destaque */
+  background-color: #fff; /* Fundo branco para destacar o conteúdo */
+  border-radius: 10px; /* Bordas arredondadas para um visual moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
 }
 
 /* Cabeçalho */
 header {
-  background: linear-gradient(to bottom, #004d99, #0066cc); /* Gradiente de azul mais profissional */
+  background: linear-gradient(to right, #0056b3, #004494); /* Gradiente de azul sofisticado */
   color: #fff;
-  padding: 15px 0;
+  padding: 20px 0;
+  border-bottom: 2px solid #004494; /* Linha de separação para um visual limpo */
 }
 
 header .container {
@@ -31,7 +32,8 @@ header .container {
 
 header h1 {
   margin: 0;
-  font-size: 28px; /* Aumenta o tamanho do título para maior impacto */
+  font-size: 32px; /* Título mais proeminente */
+  font-weight: 700; /* Negrito para mais destaque */
 }
 
 /* Navegação */
@@ -53,19 +55,21 @@ nav ul li:first-child {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: bold; /* Deixa o texto dos links em negrito */
+  font-weight: 500; /* Peso de fonte intermediário para melhor legibilidade */
 }
 
 nav ul li a:hover {
-  text-decoration: underline; /* Adiciona um sublinhado ao passar o mouse */
+  text-decoration: underline;
+  color: #cce4ff; /* Cor de destaque ao passar o mouse */
 }
 
 /* Rodapé */
 footer {
   background-color: #333; /* Fundo escuro para contraste */
-  color: #fff;
+  color: #f1f1f1; /* Texto em cor clara */
   padding: 15px 0;
   text-align: center;
+  border-top: 2px solid #444; /* Linha de separação superior */
 }
 
 footer p {
@@ -80,16 +84,16 @@ footer p {
 label {
   display: block;
   margin-bottom: 8px;
-  font-weight: bold; /* Destaque as etiquetas com negrito */
+  font-weight: 600; /* Negrito para destacar as etiquetas */
 }
 
 input {
-  width: calc(100% - 22px);
+  width: 100%;
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd; /* Borda mais clara para um visual limpo */
   border-radius: 5px;
-  box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+  box-sizing: border-box;
 }
 
 button {
@@ -97,16 +101,17 @@ button {
   width: 100%;
   padding: 12px;
   font-size: 16px;
-  background-color: #28a745; /* Verde mais profissional */
+  background-color: #0056b3; /* Azul mais escuro para o botão */
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
 }
 
 button:hover {
-  background-color: #218838; /* Tom mais escuro de verde ao passar o mouse */
+  background-color: #004494; /* Tom mais escuro de azul ao passar o mouse */
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
 }
 
 /* Resultados e elementos ocultos */
@@ -121,9 +126,10 @@ button:hover {
 /* Estilo da logo */
 .logo {
   font-family: 'Arial', sans-serif;
-  font-size: 24px;
+  font-size: 28px; /* Tamanho da fonte da logo ajustado */
+  font-weight: 700; /* Logo em negrito */
 }
 
 .logo span {
-  color: #333; /* Cor do texto mais escura para contraste */
+  color: #0056b3; /* Cor da logo em azul escuro */
 }
